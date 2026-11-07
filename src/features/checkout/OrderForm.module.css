@@ -1,0 +1,72 @@
+.form {
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.summary {
+  padding: 12px 16px;
+  background: var(--color-surface, #f5f5f5);
+  border-radius: 8px;
+}
+
+.total {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field label {
+  font-size: 14px;
+  color: var(--color-text-secondary, #666);
+}
+
+.field input,
+.field textarea {
+  padding: 8px 12px;
+  border: 1px solid var(--color-border, #ddd);
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--color-primary, #2563eb);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+.submitButton {
+  padding: 12px 24px;
+  background: var(--color-primary, #2563eb);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: var(--color-primary-hover, #1d4ed8);
+}
+
+.submitButton:disabled {
+  background: var(--color-disabled, #9ca3af);
+  cursor: not-allowed;
+}
+
+.field input[aria-invalid='true'],
+.field textarea[aria-invalid='true'] {
+  border-color: var(--color-danger, #dc2626);
+}
+
+.error {
+  font-size: 13px;
+  color: var(--color-danger, #dc2626);
+}

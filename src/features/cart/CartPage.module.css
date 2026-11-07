@@ -1,0 +1,158 @@
+.title {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.quantity {
+  color: #888;
+  margin-left: 8px;
+}
+
+.itemRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.itemPrice {
+  font-weight: 600;
+}
+
+.remove {
+  padding: 4px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  color: #888;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.remove:hover {
+  color: #c00;
+  border-color: #c00;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding: 16px;
+  font-size: 18px;
+  border-top: 2px solid #111;
+}
+
+.totalPrice {
+  font-weight: 700;
+}
+
+.promoSection {
+  margin: 20px 0;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.promoForm {
+  display: flex;
+  gap: 8px;
+}
+
+.promoInput {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.promoButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background: #111;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.promoButton:hover {
+  background: #333;
+}
+
+.promoApplied {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promoRemove {
+  border: none;
+  background: none;
+  color: #e53935;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.promoSuccess {
+  color: #2e7d32;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.promoError {
+  color: #e53935;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+.totalLabel {
+  font-weight: 600;
+}
+
+.discount {
+  color: #2e7d32;
+}
+
+.checkoutButton {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 28px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.checkoutButton:hover {
+  background: #333;
+}

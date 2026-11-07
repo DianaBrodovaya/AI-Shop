@@ -1,0 +1,66 @@
+{
+  "items": [
+    {
+      "item_id": 1,
+      "item_name": "Футболка с принтом",
+      "item_price": 2490,
+      "discount": 20,
+      "category": "Одежда",
+      "in_stock": true,
+      "image": "/images/tshirt.jpg",
+      "description": "Хлопковая футболка с авторским принтом. Размеры S–XL."
+    },
+    {
+      "item_id": 2,
+      "item_name": "Кроссовки беговые",
+      "item_price": 8990,
+      "discount": 0,
+      "category": "Обувь",
+      "in_stock": true,
+      "image": "/images/sneakers.jpg",
+      "description": "Лёгкие кроссовки для ежедневных пробежек. Амортизация пятки."
+    },
+    {
+      "item_id": 3,
+      "item_name": "Рюкзак городской",
+      "item_price": 4590,
+      "discount": 15,
+      "category": "Аксессуары",
+      "in_stock": true,
+      "image": "/images/backpack.jpg",
+      "description": "Рюкзак 20 л с отделением для ноутбука 15\". Водоотталкивающая ткань."
+    },
+    {
+      "item_id": 4,
+      "item_name": "Часы наручные",
+      "item_price": 12900,
+      "discount": 0,
+      "category": "Аксессуары",
+      "in_stock": false,
+      "image": "/images/watch.jpg",
+      "description": "Кварцевые часы с минеральным стеклом. Водозащита 5 ATM."
+    },
+    {
+      "item_id": 5,
+      "item_name": "Куртка демисезонная",
+      "item_price": 7490,
+      "discount": 30,
+      "category": "Одежда",
+      "in_stock": true,
+      "image": "/images/jacket.jpg",
+      "description": "Утеплённая куртка для весны и осени. Ветрозащитная мембрана."
+    },
+    {
+      "item_id": 6,
+      "item_name": "Шапка вязаная",
+      "item_price": 1290,
+      "discount": 0,
+      "category": "Аксессуары",
+      "in_stock": true,
+      "image": "/images/beanie.jpg",
+      "description": "Шерстяная шапка с отворотом. Универсальный размер."
+    }
+  ],
+  "total": 6,
+  "page": 1
+}

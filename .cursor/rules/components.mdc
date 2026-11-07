@@ -1,0 +1,9 @@
+---
+description: Соглашения по React-компонентам
+globs: "src/{components,features}/**/*.jsx"
+---
+
+Функциональные компоненты.
+Деструктуризация пропсов в аргументах.
+Один компонент на файл.
+Стили через CSS-модули: import styles from './Component.module.css'.
