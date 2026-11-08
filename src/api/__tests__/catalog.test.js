@@ -118,6 +118,61 @@ describe("API Client", () => {
     expect(result.e.type).toBe(ErrorType.INVALID_RESPONSE);
   });
 
+  it("throws INVALID_RESPONSE when response body is not JSON", async () => {
+    fetch.mockResolvedValue({
+      ok: true,
+      status: 200,
+      json: () => Promise.reject(new SyntaxError("Unexpected token <")),
+    });
+
+    const promise = fetchProductsWithRetry();
+    const settled = promise.then((v) => ({ ok: true, v })).catch((e) => ({ ok: false, e }));
+    await vi.runAllTimersAsync();
+
+    const result = await settled;
+    expect(result.ok).toBe(false);
+    expect(result.e).toBeInstanceOf(ApiError);
+    expect(result.e.type).toBe(ErrorType.INVALID_RESPONSE);
+  });
+
+  it("throws INVALID_RESPONSE when response body is null", async () => {
+    fetch.mockResolvedValue({
+      ok: true,
+      status: 200,
+      json: () => Promise.resolve(null),
+    });
+
+    const promise = fetchProductsWithRetry();
+    const settled = promise.then((v) => ({ ok: true, v })).catch((e) => ({ ok: false, e }));
+    await vi.runAllTimersAsync();
+
+    const result = await settled;
+    expect(result.ok).toBe(false);
+    expect(result.e).toBeInstanceOf(ApiError);
+    expect(result.e.type).toBe(ErrorType.INVALID_RESPONSE);
+  });
+
+  it("throws INVALID_RESPONSE when required product field is missing", async () => {
+    fetch.mockResolvedValue({
+      ok: true,
+      status: 200,
+      json: () => Promise.resolve({
+        items: [{ item_name: "Test", item_price: 100, in_stock: true }],
+        total: 1,
+        page: 1,
+      }),
+    });
+
+    const promise = fetchProductsWithRetry();
+    const settled = promise.then((v) => ({ ok: true, v })).catch((e) => ({ ok: false, e }));
+    await vi.runAllTimersAsync();
+
+    const result = await settled;
+    expect(result.ok).toBe(false);
+    expect(result.e).toBeInstanceOf(ApiError);
+    expect(result.e.type).toBe(ErrorType.INVALID_RESPONSE);
+  });
+
   it("handles rate limit 429", async () => {
     const headers = new Headers();
     headers.set("Retry-After", "5");
